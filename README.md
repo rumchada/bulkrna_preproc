@@ -5,7 +5,7 @@ Check if you have Docker and Nextflow installed
 nextflow --version
 docker --version
 ```
-Download Docker Image: This contain the environment for the Nextflow Pipeline
+Download Docker Image: This contains the environment for the Nextflow Pipeline
 
 ```bash
 docker pull gbolden101/bulk-rna-pipeline:1.0
