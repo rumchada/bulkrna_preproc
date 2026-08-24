@@ -17,6 +17,11 @@ Check the Sample Sheet for CSV structure. You can either use the test data or yo
 Download the Test Data or use your own
 https://github.com/csoneson/rnaseqworkflow_exampledata
 
+Required Inputs:
+1. sample_sheet in CSV Format with columns sample_ID,fastq_1,fastq_2
+2. reference genome
+3. reference gtf
+   
 Complete the Command
 
 nextflow run ./scripts/rna_bulk.nf \
