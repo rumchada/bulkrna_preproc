@@ -1,4 +1,4 @@
-Instructions on how to run
+Instructions:
 
 Check if you have Docker and Nextflow installed
 
@@ -6,9 +6,15 @@ download docker Image
 
 docker pull gbolden101/bulk-rna-pipeline:1.0
 
-Clone Git Repository
+Run the Docker Image to Produce the Container
 
-If need be, use the test data
+docker run gbolden101/bulk-rna-pipeline:1.0
+
+Clone Git Repository for Nextflow Modules and Script
+
+Check the Sample Sheet for CSV structure. You can either use the test data or your own
+
+Download the Test Data or use your own
 https://github.com/csoneson/rnaseqworkflow_exampledata
 
 Complete the Command
@@ -21,6 +27,5 @@ nextflow run ./scripts/rna_bulk.nf \
             --trim false
             -resume
 
-
-#use -resume to use cached data
-For example if a researcher wants trim their reads -resume will pick up with cached result
+#use -resume at the end of the command to use cached data
+For example if a researcher wants trim their reads -resume will pick up with cached results
