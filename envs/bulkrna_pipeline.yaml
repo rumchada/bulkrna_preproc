@@ -1,0 +1,21 @@
+#basics of a bulk rna-seq pipeline
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - nextflow
+  - python
+  - fastqc
+  - cutadapt
+  - star
+  - samtools
+  - hisat2
+  - htseq
+  - subread
+  - r-base
+  - r-tidyverse
+  - r-dplyr
+  - r-vroom

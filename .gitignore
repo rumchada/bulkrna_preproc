@@ -1,0 +1,68 @@
+# Nextflow work directories
+work/
+
+# Nextflow logs
+.nextflow.log
+.nextflow.log.*
+
+# Nextflow cache
+.nextflow/
+
+# STAR/HISAT2 index files
+index_files/
+
+# Intermediate files
+intermediate_files/
+
+
+# FASTQ files
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# BAM/SAM files
+*.bam
+*.bai
+*.sam
+
+# Reference genomes
+*.fa
+*.fasta
+*.fa.gz
+*.fasta.gz
+
+# GTF/GFF annotations
+*.gtf
+*.gtf.gz
+*.gff
+*.gff3
+*.gff.gz
+
+Log.out
+Log.progress.out
+Log.final.out
+SJ.out.tab
+
+# HISAT2 index
+*.ht2
+*.ht2l
+
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio
+.Rproj.user/
+
+.DS_Store
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/

@@ -1,0 +1,42 @@
+#sequencing data
+data/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Reference files
+*.fa
+*.fasta
+*.fa.gz
+*.fasta.gz
+*.gtf
+*.gff
+*.gff3
+
+#Alignment files
+*.bam
+*.bai
+*.sam
+*.cram
+*.crai
+
+#STAR HISAT2 indecies
+star_index/
+index_files/
+
+# Pipeline output
+results/
+work/
+
+# Nextflow
+.nextflow/
+.nextflow.log
+.nextflow.log.*
+
+# macOS
+.DS_Store
+
+# Git
+.git/
+.gitignore

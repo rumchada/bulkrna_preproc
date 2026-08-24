@@ -1,0 +1,29 @@
+#basics of a bulk rna-seq pipeline
+#This version is for the docker container
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python
+
+  # QC / preprocessing
+  - fastqc
+  - cutadapt
+
+  # Alignment
+  - star
+  - hisat2
+
+  # BAM / counting
+  - samtools
+  - subread
+  - htseq
+
+  # R
+  - r-base
+  - r-tidyverse
+  - r-dplyr
+  - r-vroom
