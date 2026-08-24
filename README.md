@@ -1,11 +1,15 @@
-Comand Staging Ground and Trial Notes
+Instructions on how to run
+Check if you have Docker and Nextflow installed
 
-test_data_origins
+download docker Image
+docker pull gbolden101/bulk-rna-pipeline:1.0
+
+Clone Git Repository
+
+If need be, use the test data
 https://github.com/csoneson/rnaseqworkflow_exampledata
 
-Instructions for Runnning
-conda env create bulk_rna
-
+Complete the Command
 
 nextflow run ./scripts/rna_bulk.nf \
             --sample_sheet ../test_sample_sheet.csv \
@@ -17,4 +21,4 @@ nextflow run ./scripts/rna_bulk.nf \
 
 
 #use -resume to use cached data
-#for example if a researcher wants trim their reads -resume will pick up with cached result
+For example if a researcher wants trim their reads -resume will pick up with cached result
