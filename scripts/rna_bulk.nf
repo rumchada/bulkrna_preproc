@@ -1,4 +1,3 @@
-
 params {
     // input/output
     sample_sheet: Path = null
@@ -29,13 +28,13 @@ include { trim } from '../modules/trim.nf'
 
 //STAR Indexing
 //include { star_index } from "../modules/STAR_INDEX.nf"
+
 //STAR Alignment
 // Spliced Transcripts Aligner could not read the unzipped
 // A little extra gzip commands will be needed in the script of ALIGN process
-// crossing my finger Nextflow has built in infrastructure to not publish internal script directories
 // include { ALIGN } from "../modules/STAR_ALIGN.nf"
 //quality checking alignment
-// Abandoned STAR Alignment when bug could not be fixed on time. Pivot to the
+// Abandoned STAR Alignment when bug could not be fixed on time. Report in STAR Align module
 
 include { hisat_index } from  "../modules/hisat2_index.nf"
 

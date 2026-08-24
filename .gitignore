@@ -8,8 +8,8 @@ work/
 # Nextflow cache
 .nextflow/
 
-#FASTQ zip file
-*.zip
+#FASTQC zip file
+*_fastqc.zip
 
 # STAR/HISAT2 index files
 index_files/
