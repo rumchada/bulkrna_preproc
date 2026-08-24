@@ -1,4 +1,5 @@
 Instructions on how to run
+
 Check if you have Docker and Nextflow installed
 
 download docker Image
