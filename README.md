@@ -2,6 +2,7 @@ Instructions on how to run
 Check if you have Docker and Nextflow installed
 
 download docker Image
+
 docker pull gbolden101/bulk-rna-pipeline:1.0
 
 Clone Git Repository
