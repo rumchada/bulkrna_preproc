@@ -1,14 +1,20 @@
 Instructions:
 
 Check if you have Docker and Nextflow installed
+```bash
+nextflow --version
+docker --version
+```
+Download docker Image
 
-download docker Image
-
+```bash
 docker pull gbolden101/bulk-rna-pipeline:1.0
-
+```
 Run the Docker Image to Produce the Container
 
+```bash
 docker run gbolden101/bulk-rna-pipeline:1.0
+```
 
 Clone Git Repository for Nextflow Modules and Script
 
@@ -23,7 +29,7 @@ Required Inputs:
 3. reference gtf
    
 Complete the Command
-
+```bash
 nextflow run ./scripts/rna_bulk.nf \
             --sample_sheet ../test_sample_sheet.csv \
             --final_outdir test \
@@ -31,6 +37,7 @@ nextflow run ./scripts/rna_bulk.nf \
             --gtf ../reference_test/Homo_sapiens.GRCh38.93.1.1.10M.gtf \
             --trim false
             -resume
+```
 
 #use -resume at the end of the command to use cached data
 For example if a researcher wants trim their reads -resume will pick up with cached results
