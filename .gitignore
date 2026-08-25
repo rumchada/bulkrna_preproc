@@ -9,14 +9,13 @@ work/
 .nextflow/
 
 #FASTQC zip file
-*_fastqc.zip
+fastqc_results/*_fastqc.zip
 
 # STAR/HISAT2 index files
 index_files/
 
 # Intermediate files
 intermediate_files/
-
 
 # FASTQ files
 *.fastq
