@@ -90,7 +90,7 @@ workflow {
 
     //take from the inital split channel and conver to individual reads
 
-    //columns wise validation
+    // Sample_sheet columns wise validation
     validation_step = samplesheet_ch.map { row ->
 
     def required_columns = ['sample', 'fastq_1', 'fastq_2']
