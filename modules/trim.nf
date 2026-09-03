@@ -4,6 +4,9 @@ process trim {
 
     input:
     tuple val(sample), val(read_type), path(raw_reads)
+    val min_length
+    val quality
+
 
     output:
     //outputting a tuple would help lead this into the ALIGN process.
@@ -22,8 +25,8 @@ process trim {
     """
     mkdir -p cut_reads
 
-    cutadapt -q ${params.quality} \
-        --minimum-length ${params.min_length} \
+    cutadapt -q ${quality} \
+        --minimum-length ${min_length} \
         -o cut_reads/${sample}_R1_trimmed.fastq.gz \
         -p cut_reads/${sample}_R2_trimmed.fastq.gz \
         ${raw_reads[0]} ${raw_reads[1]}
@@ -35,8 +38,8 @@ process trim {
     """
     mkdir -p cut_reads
 
-    cutadapt -q ${params.quality} \
-        --minimum-length ${params.min_length} \
+    cutadapt -q ${quality} \
+        --minimum-length ${min_length} \
         -o cut_reads/${sample}_R1_trimmed.fastq.gz \
         ${raw_reads[0]}
     """

@@ -161,12 +161,15 @@ workflow {
         //cutadapet Process
         //Cutadapt Process
         //trimmed reads do not need to put onto the disk
-        trimmed_reads_ch = trim(reads_ch)
+
+        //trim
+        trim(reads_ch, params.min_length, params.quality)
+
+        alignment_reads_ch = trim.out.trimmed_reads
 
         //I may change this if there in an option for outputing the htmls
-        FASTQC_TRIMMED(trimmed_reads_ch.out.trimmed_reads)
-
-        alignment_reads_ch = trimmed_reads_ch.out.trimmed_reads
+        //FASTQC_TRIMMED module captures the output of trim
+        FASTQC_TRIMMED(trim.out.trimmed_reads)
 
     } else {
         // else: use the original reads channel for alignment
