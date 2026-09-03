@@ -5,6 +5,8 @@ Check if you have Docker and Nextflow installed
 nextflow --version
 docker --version
 ```
+Tip: Add nextflow to your PATH with an alias ("nextflow") to call on your cmd line
+
 Download Docker Image: This contains the environment for the Nextflow Pipeline
 
 ```bash
