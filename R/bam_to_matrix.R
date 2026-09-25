@@ -33,7 +33,7 @@ bam_to_counts <- function(output) {
   }
   #creat names for the list
   #substitute for the final counts name with base name of the file
-  names(counts) <- sub( "_counts\\.tsv$", "", basename(files) )
+  names(counts) <- sub( "_counts\\.tsv$", "", basename(files))
 
   #column bind the count columns
   count_matrix <- do.call(cbind, counts)

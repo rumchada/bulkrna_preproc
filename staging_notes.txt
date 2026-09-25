@@ -28,3 +28,25 @@ nextflow run ./scripts/rna_bulk.nf \
             --genome_fa ../reference_test/Homo_sapiens.GRCh38.dna.chromosome.1.1.10M.fa \
             --gtf ../reference_test/Homo_sapiens.GRCh38.93.1.1.10M.gtf \
             --trim true
+
+#AWS testing
+nextflow run ./scripts/rna_bulk.nf \
+            --sample_sheet s3://gbolden-nextflow/test_sample_sheet.csv \
+            --final_outdir s3://gbolden-nextflow/aws_test \
+            --genome_fa s3://gbolden-nextflow/reference_test/Homo_sapiens.GRCh38.dna.chromosome.1.1.10M.fa \
+            --gtf s3://gbolden-nextflow/reference_test/Homo_sapiens.GRCh38.93.1.1.10M.gtf \
+            --trim false
+
+##Testing Errors
+# Multiple Rows with the same name
+ERROR ~ Error executing process > 'merge_counts'
+Caused by:
+  Process `merge_counts` input file name collision -- There are multiple input files for each of the following file names: disease_PE_counts.tsv, control_PE_counts.tsv
+Container:
+  gbolden101/bulk-rna-pipeline:1.0
+
+
+# Handling Corupt FASTQ files 
+
+# Mulitiple QC pipeline integration
+

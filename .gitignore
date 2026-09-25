@@ -1,5 +1,8 @@
 # Nextflow work directories
 work/
+aws_files/
+*.json
+*.pem
 
 # Nextflow logs
 .nextflow.log
