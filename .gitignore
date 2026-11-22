@@ -3,6 +3,9 @@ work/
 aws_files/
 *.json
 *.pem
+test/
+
+
 
 # Nextflow logs
 .nextflow.log

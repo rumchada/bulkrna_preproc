@@ -13,7 +13,7 @@ params {
    quality: Integer = 0
 
    //cloud computing option (address by Sunday)
-   //profile: String = null
+   profile: String = null
 
 }
 
